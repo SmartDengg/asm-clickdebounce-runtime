@@ -1,0 +1,13 @@
+include ':click-debounce-runtime'
+
+
+settings.rootProject.name = 'click-debounce'
+
+def initBuildFile(def projects) {
+  projects.each {
+    it.buildFileName = "${it.name}.gradle" - "$rootProject.name" - '-'
+    initBuildFile(it.children)
+  }
+}
+
+initBuildFile(settings.rootProject.children)
