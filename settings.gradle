@@ -1,11 +1,11 @@
 include ':click-debounce-runtime'
 
 
-settings.rootProject.name = 'click-debounce'
+settings.rootProject.name = 'click-debounce-runtime'
 
 def initBuildFile(def projects) {
   projects.each {
-    it.buildFileName = "${it.name}.gradle" - "$rootProject.name" - '-'
+    it.buildFileName = "${it.name}.gradle" - "click-debounce-"
     initBuildFile(it.children)
   }
 }
