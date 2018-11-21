@@ -1,7 +1,6 @@
 include ':click-debounce-runtime'
 
-
-settings.rootProject.name = 'click-debounce-runtime'
+settings.rootProject.name = 'debounce-runtime'
 
 def initBuildFile(def projects) {
   projects.each {
