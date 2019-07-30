@@ -45,18 +45,18 @@ public class DebouncedPredictor {
   }
 
   private static class FrozenView extends WeakReference<View> {
-    private long FrozenWindowTime;
+    private long frozenWindowTime;
 
     FrozenView(View referent) {
       super(referent);
     }
 
     long getFrozenWindowTime() {
-      return FrozenWindowTime;
+      return frozenWindowTime;
     }
 
     void setFrozenWindow(long expirationTime) {
-      this.FrozenWindowTime = expirationTime;
+      this.frozenWindowTime = expirationTime;
     }
   }
 }
